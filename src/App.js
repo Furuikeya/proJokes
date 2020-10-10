@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import JokeBox from './JokeBox';
+import JokeButton from './JokeButton';
 import './App.css';
 import 'tachyons';
 
@@ -6,41 +8,52 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      joke: '',
-      setup: '',
-      delivery: '',
+      joke: 'Click the button to get a joke',
+      setup: 'about',
+      delivery: 'programmers',
     }
+    this.jokeButtonClick = this.jokeButtonClick.bind(this);
   }
 
-  componentDidMount() {
+ 
+
+  jokeButtonClick() {
+    // this.setState.joke='';
+    // this.setState.setup='';
+    // this.setState.delivery='';
     fetch('https://sv443.net/jokeapi/v2/joke/Programming')
     .then(response => response.json())
     .then(result => {
       if (result.type === 'single') {
-        return this.setState({ joke: result.joke })
-      } else {
         return (
-          this.setState({ setup: result.setup }),
-          this.setState({ delivery: result.delivery })
-        )
-      }
-      
-    });
-  };
+          this.setState({ joke: result.joke }),
+          this.setState({ setup: '' }),
+          this.setState({ delivery: '' })
+          )
+      } else {
+          return (
+            this.setState({ setup: result.setup }),
+            this.setState({ delivery: result.delivery }),
+            this.setState({ joke: '' })
+          )
+        } 
+    })
+  }
 
   render() {
     const {joke, setup, delivery} = this.state;
     return (
       <div className='tc'>
-        <button className='joke-button bg-gold bw3 br1 b--dark-red grow grow:hover '>joke</button>
-        <div className='joke f3 bg-gold'>
-          <div>{joke}</div>
-          <div>{setup}</div>
-          <div>{delivery}</div>  
-        </div>
-        
+        <JokeButton 
+        jokeClick={this.jokeButtonClick}
+        />
+        <JokeBox 
+        joke={joke} 
+        setup={setup} 
+        delivery={delivery}
+        />
       </div>
-      )
+    )
   }
 }
 
