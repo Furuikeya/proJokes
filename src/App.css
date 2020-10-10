@@ -2,13 +2,15 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding: 24px;
 }
 
 .joke {
+  padding: 10px;
   text-align: center;
   margin: auto;
-  width: 50%;
-  border: solid #ddd 5px;
-  outline: 5px solid #d6EE00;
+  width: 66%;
+  border: solid #449 5px;
+  outline: 5px solid #0aEE00;
   outline-offset: 7px;
 }
