@@ -18,9 +18,6 @@ class App extends Component {
  
 
   jokeButtonClick() {
-    // this.setState.joke='';
-    // this.setState.setup='';
-    // this.setState.delivery='';
     fetch('https://sv443.net/jokeapi/v2/joke/Programming')
     .then(response => response.json())
     .then(result => {
