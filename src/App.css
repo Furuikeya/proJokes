@@ -1,8 +1,16 @@
+@font-face {
+  font-family: 'bitwise';
+  src: local('bitwise'), url('bitwise.ttf');
+}
+
 .joke-button {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 24px;
+  padding: 12px;
+  padding-left: 17px;
+  font-family: 'Bitwise';
+  font-size: 2rem;
 }
 
 .joke {
@@ -10,7 +18,10 @@
   text-align: center;
   margin: auto;
   width: 66%;
+  background-color: rgba(255, 183, 0, 1);
   border: solid #449 7px;
   outline: 5px solid #0aEE00;
   outline-offset: 7px;
+  font-family: 'courier';
+  font-weight: 800;
 }

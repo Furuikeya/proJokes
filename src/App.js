@@ -8,9 +8,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      joke: 'Click the button to get a joke',
-      setup: 'about',
-      delivery: 'programmers',
+      joke: 'Click the button',
+      setup: 'to get a joke',
+      delivery: 'about programmers',
     }
     this.jokeButtonClick = this.jokeButtonClick.bind(this);
   }
