@@ -2,7 +2,9 @@
   font-family: 'bitwise';
   src: local('bitwise'), url('bitwise.ttf');
 }
- 
+
+button, 
+button:active, 
 button:focus {
     outline: none;
 }
