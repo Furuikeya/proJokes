@@ -6,7 +6,7 @@
 button, 
 button:active, 
 button:focus {
-    outline: none;
+    outline: none !important;
 }
 
 .joke-button {
