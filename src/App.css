@@ -2,6 +2,10 @@
   font-family: 'bitwise';
   src: local('bitwise'), url('bitwise.ttf');
 }
+ 
+button:focus {
+    outline: none;
+}
 
 .joke-button {
   text-align: center;
@@ -11,8 +15,6 @@
   padding-left: 17px;
   font-family: 'Bitwise';
   font-size: 2rem;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-tap-highlight-color: transparent; 
 }
 
 .joke {
