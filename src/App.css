@@ -3,12 +3,6 @@
   src: local('bitwise'), url('bitwise.ttf');
 }
 
-button, 
-button:active, 
-button:focus {
-    outline: none !important;
-}
-
 .joke-button {
   text-align: center;
   margin-top: 50px;
@@ -17,6 +11,9 @@ button:focus {
   padding-left: 17px;
   font-family: 'Bitwise';
   font-size: 2rem;
+}
+.joke-button:focus {
+  outline: none;
 }
 
 .joke {
