@@ -35,7 +35,7 @@
   outline-offset: 7px;
   font-family: 'courier';
   font-weight: 800;
-  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .githubDiv {
@@ -63,4 +63,7 @@ a:hover {
 }
 a:active {
   background-color: rgba(255, 183, 0, 0.9);
+}
+a:focus {
+  outline: none;
 }
