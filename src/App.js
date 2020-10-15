@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     const {joke, setup, delivery} = this.state;
     return (
-      <div className='tc'>
+      <div className='app'>
         <JokeButton 
         jokeClick={this.jokeButtonClick}
         />
@@ -49,6 +49,7 @@ class App extends Component {
         setup={setup} 
         delivery={delivery}
         />
+        <a href='https://github.com/Furuikeya/projokes'> GitHub </a>  
       </div>
     )
   }
