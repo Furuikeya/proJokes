@@ -15,13 +15,21 @@ class App extends Component {
     this.jokeButtonClick = this.jokeButtonClick.bind(this);
   }
 
- 
+  
 
   jokeButtonClick() {
     fetch('https://sv443.net/jokeapi/v2/joke/Programming')
     .then(response => response.json())
     .then(result => {
-      if (result.type === 'single' && result.id !== '28') {
+      
+      const checkOf28 = () => {
+        if (result.id === '28') {
+          return this.jokeButtonClick();
+        }
+      }
+
+      checkOf28();
+      if (result.type === 'single') {
         return (
           this.setState({ joke: result.joke }),
           this.setState({ setup: '' }),
