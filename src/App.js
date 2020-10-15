@@ -41,15 +41,23 @@ class App extends Component {
     const {joke, setup, delivery} = this.state;
     return (
       <div className='app'>
-        <JokeButton 
-        jokeClick={this.jokeButtonClick}
-        />
-        <JokeBox 
-        joke={joke} 
-        setup={setup} 
-        delivery={delivery}
-        />
-        <a href='https://github.com/Furuikeya/projokes'> GitHub </a>  
+        <div>
+          <JokeButton 
+            jokeClick={this.jokeButtonClick}
+          />  
+        </div>
+        
+        <div>
+          <JokeBox 
+            joke={joke} 
+            setup={setup} 
+            delivery={delivery}
+          />  
+        </div>
+        
+        <div className='githubDiv'>
+          <a href='https://github.com/Furuikeya/projokes'> GitHub </a>
+        </div>
       </div>
     )
   }

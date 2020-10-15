@@ -5,6 +5,10 @@
 
 .app {
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .joke-button {
@@ -23,7 +27,7 @@
 .joke {
   padding: 10px;
   margin: auto;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
   width: 66%;
   background-color: rgba(255, 183, 0, 1);
   border: solid #449 7px;
@@ -34,16 +38,20 @@
   text-align: center;
 }
 
-a:link {
+.githubDiv {
+  align-self: left;
   width: 70px;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  margin-left: -35px;
+  transform: rotate(180deg);
+  rotate: x 180deg;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+a:link {
   padding: 5px;
   padding-bottom: 7px;
   color: #12190e;
-  background-color: rgba(255, 183, 0, 0.8);
+  background-color: rgba(255, 183, 0, 0.12);
   border-radius: 9999px;
   text-decoration: none;
 }
@@ -52,4 +60,7 @@ a:visited {
 }
 a:hover {
   background-color: rgba(255, 183, 0, 1);
+}
+a:active {
+  background-color: rgba(255, 183, 0, 0.9);
 }
