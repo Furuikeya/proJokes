@@ -21,7 +21,7 @@ class App extends Component {
     fetch('https://sv443.net/jokeapi/v2/joke/Programming')
     .then(response => response.json())
     .then(result => {
-      if (result.type === 'single') {
+      if (result.type === 'single' && result.id !== '28') {
         return (
           this.setState({ joke: result.joke }),
           this.setState({ setup: '' }),
@@ -47,7 +47,7 @@ class App extends Component {
           />  
         </div>
         
-        <div>
+        <div className='joke'>
           <JokeBox 
             joke={joke} 
             setup={setup} 

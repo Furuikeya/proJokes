@@ -4,7 +4,7 @@ import 'tachyons';
 
 const JokeBox = ({ joke, setup, delivery }) => {
 	return (
-		<div className='joke f3'>
+		<div className='f3'>
           <div>{joke}</div>
           <div>{setup}</div>
           <div>{delivery}</div>  
