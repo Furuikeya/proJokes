@@ -21,27 +21,18 @@ class App extends Component {
     fetch('https://sv443.net/jokeapi/v2/joke/Programming')
     .then(response => response.json())
     .then(result => {
-      
-      const checkOf28 = () => {
-        if (result.id === '28') {
-          return this.jokeButtonClick();
-        }
-      }
-
-      checkOf28();
       if (result.type === 'single') {
         return (
           this.setState({ joke: result.joke }),
           this.setState({ setup: '' }),
           this.setState({ delivery: '' })
-          )
-      } else {
-          return (
-            this.setState({ setup: result.setup }),
-            this.setState({ delivery: result.delivery }),
-            this.setState({ joke: '' })
-          )
-        } 
+          )} else {
+              return (
+                this.setState({ setup: result.setup }),
+                this.setState({ delivery: result.delivery }),
+                this.setState({ joke: '' })
+              )
+            }  
     })
   }
 
